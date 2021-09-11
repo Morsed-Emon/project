@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+import data from './data';
 function App() {
   return (
         <><nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -18,13 +18,13 @@ function App() {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><h4>Sign In</h4></a>
+              <a class="nav-link" href="/Sign in"><h4>Sign In</h4></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><h4>Cart</h4></a>
+              <a class="nav-link" href="/Cart"><h4>Cart</h4></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><h4>About</h4></a>
+              <a class="nav-link" href="/About"><h4>About</h4></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -41,53 +41,19 @@ function App() {
           </form>
         </div>
       </div>
-    </nav><main id="main-container">
+    </nav>
+    <main id="main-container">
         <div>
-          <ul class="products">
+          {
+            data.products.map((product)=> 
+            <ul  class="products">
             <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/b10.jpg"></img>
+              <div key={products._id} class="product">
+                <a href={`/product/${product._id}`}>
+                  <img class="medium" src={products.image}></img>
                 </a>
                 <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                </div>
-
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/b11.jpg"></img>
-
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
+                  <a href={`/product/${products._id}`}><h1>{product.name}</h1></a>
                 </div>
                 <div class="product-rating">
                   <span>
@@ -107,223 +73,56 @@ function App() {
                   </span>
                 </div>
                 <div class="product-brand">
-                  Nike
+                  ${products.brand}
                 </div>
                 <div class="Product-price">
-                  $50
+                  ${products.price}
                 </div>
               </div>
             </li>
+          </ul>  )
+          }
+         
+         
+         
+         
+         
+         
+         
+         
 
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/b12.jpg"></img>
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                </div>
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
 
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/b13.jpg"></img>
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                </div>
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
+         
+         
+         
+         
+         
+         
+         
+         
 
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/b15.jpg"></img>
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                </div>
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/12.jpg"></img>
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                </div>
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/19.jpg"></img>
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                </div>
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="product">
-                <a href="product.html">
-                  <img class="medium" src="images/20.jpg"></img>
-                </a>
-                <div class="product-name">
-                  <a href="">Fit slim Shirt</a>
-                </div>
-                <div class="product-rating">
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i class="fa fa-star-half-o"></i>
-                  </span>
-                </div>
-                <div class="product-brand">
-                  Nike
-                </div>
-                <div class="Product-price">
-                  $50
-                </div>
-              </div>
-            </li>
-
-
-
-          </ul>
+         
         </div>
-      </main><footer>
+      </main>
+      <footer>
         Developed By Morsed Emon
       </footer></>
         
