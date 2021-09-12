@@ -5,7 +5,7 @@ products:[
         name:'Full Zip Running Shirts',
         Category:'Shirts',
         image:'images/b5.jpg',
-        price:60,
+        price:50,
         rating:4.5,
         numReviews:10,
         countInstock:6,
